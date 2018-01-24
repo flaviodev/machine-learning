@@ -1,0 +1,10 @@
+# recommenders -> mahout
+
+# matrix -> user X item
+
+# user based similarity -> user similar -> item similiar
+
+# distance function between vectors 
+#    -> sum (common items difference ^ 2) / amount common items 
+
+
