@@ -7,4 +7,24 @@
 # distance function between vectors 
 #    -> sum (common items difference ^ 2) / amount common items 
 
+# id user + id item + score -> 1,1,10
+DataModel model = new FileDataModel(new File(dados.csv));
+
+UserSimilarity similarity = new PersonCorrelationSimilarity(model)
+
+// user are closed until difference 0.1
+UserNeighborhood neighborhood = new ThresholdUserNeighborhood(0.1, similaity, model);
+
+// function recommender
+UserBasedRecommender recommender = new GenericUserBasedRecommender(model, neighborhood, similarity)
+
+
+// recommend 3 items to user 2
+List recommendations = recommender.recommend(2, 3);
+for ( RecommendedItem recommendation : recommendations ){
+    System.out.println(recommendation);
+}
+
+
+
 
