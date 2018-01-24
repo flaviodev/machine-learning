@@ -9,10 +9,6 @@ import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.recommender.UserBasedRecommender;
 
-/**
- * Hello world!
- *
- */
 public class CoursesRecommender {
 	public static void main(String[] args) throws TasteException, IOException {
 		File file = new File("src/main/resources/courses2.csv");
