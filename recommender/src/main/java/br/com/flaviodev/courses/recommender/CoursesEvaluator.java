@@ -16,7 +16,7 @@ public class CoursesEvaluator {
 		
 		RandomUtils.useTestSeed();
 		
-		File file = new File("src/main/resources/courses.csv");
+		File file = new File("src/main/resources/courses2.csv");
 		FileDataModel model = new FileDataModel(file);
 		
 		RecommenderEvaluator evaluator = new AverageAbsoluteDifferenceRecommenderEvaluator();

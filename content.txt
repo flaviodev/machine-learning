@@ -25,6 +25,8 @@ for ( RecommendedItem recommendation : recommendations ){
     System.out.println(recommendation);
 }
 
+# using question before user score an item
 
+# using tratament with scales
 
 
