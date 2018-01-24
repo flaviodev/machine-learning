@@ -13,12 +13,12 @@ import org.apache.mahout.cf.taste.recommender.UserBasedRecommender;
  * Hello world!
  *
  */
-public class App {
+public class Recommender {
 	public static void main(String[] args) throws TasteException, IOException {
-		File file = new File("src/main/resources/dados.csv");
+		File file = new File("src/main/resources/data.csv");
 		FileDataModel model = new FileDataModel(file);
 
-		UserBasedRecommender recommender = (UserBasedRecommender) new ProductRecommender().buildRecommender(model);
+		UserBasedRecommender recommender = (UserBasedRecommender) new MyRecommenderBuilder().buildRecommender(model);
 	
 		List<RecommendedItem> recommendations = recommender.recommend(2, 3);
 		for (RecommendedItem recommendation : recommendations) {

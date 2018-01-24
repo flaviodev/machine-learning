@@ -10,13 +10,13 @@ import org.apache.mahout.cf.taste.impl.eval.AverageAbsoluteDifferenceRecommender
 import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
 import org.apache.mahout.common.RandomUtils;
 
-public class Evaluator {
+public class CoursesEvaluator {
 
 	public static void main(String[] args) throws IOException, TasteException {
 		
 		RandomUtils.useTestSeed();
 		
-		File file = new File("src/main/resources/data.csv");
+		File file = new File("src/main/resources/courses.csv");
 		FileDataModel model = new FileDataModel(file);
 		
 		RecommenderEvaluator evaluator = new AverageAbsoluteDifferenceRecommenderEvaluator();
